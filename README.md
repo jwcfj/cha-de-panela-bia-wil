@@ -71,3 +71,10 @@ docker build -t test-lista-image .
 ## Run image
 
 docker run -d -p 80:80 test-lista-image
+
+
+
+## deploy on git
+ng build --configuration production --base-href /cha-de-panela-bia-wil/
+
+npx angular-cli-ghpages --dir=dist/lista-presentes
