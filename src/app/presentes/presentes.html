@@ -1,0 +1,25 @@
+<!-- <div class="grid">
+  <div class="card" *ngFor="let p of presentes">
+    <img [src]="p.img" alt="{{p.nome}}">
+    <h3>{{p.nome}}</h3>
+    <button (click)="pagar(p)">Pagar</button>
+  </div>
+</div> -->
+
+
+<div class="grid">
+  <div class="card" *ngFor="let p of presentes">
+    <img [src]="p.img_1" alt="{{p.nome}}">
+    <h3>{{p.nome}}</h3>
+    <!-- O botão "Pagar" agora abre o modal com a imagem -->
+    <button (click)="openModal(p.img_2)">Pagar</button>
+  </div>
+</div>
+
+<!-- Modal de visualização da imagem -->
+<div class="modal" *ngIf="selectedImage">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img [src]="selectedImage" alt="Imagem do Presente">
+  </div>
+</div>
